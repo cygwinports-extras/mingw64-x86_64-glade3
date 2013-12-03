@@ -1,0 +1,23 @@
+CROSS_HOST="x86_64-w64-mingw32"
+ORIG_PN="glade3"
+inherit cross gnome2
+
+NAME="mingw64-x86_64-glade3"
+VERSION=3.8.4
+RELEASE=2
+CATEGORY="Devel"
+SUMMARY="GTK+2 GUI designer for Win64 toolchain"
+DESCRIPTION="Glade is a RAD tool to enable quick & easy development of user
+interfaces for the GTK+ toolkit and the GNOME desktop environment. The user
+interfaces designed in Glade are saved as XML, and by using the GtkBuilder
+object these can be loaded by applications dynamically as needed. By using
+GtkBuilder, Glade XML files can be used in numerous programming languages
+including C, C++, C#, Vala, Java, Perl, Python, and others."
+HOMEPAGE="http://glade.gnome.org/"
+
+PATCH_URI="
+	3.6.4-gmodule-path.patch
+	3.8.4-vpath.patch
+"
+
+CYGCONF_ARGS="--disable-python --disable-static"

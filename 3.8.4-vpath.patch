@@ -1,0 +1,21 @@
+--- origsrc/glade3-3.8.4/gladeui/Makefile.am	2013-09-13 23:01:36.000000000 -0500
++++ src/glade3-3.8.4/gladeui/Makefile.am	2013-11-22 03:39:32.771630500 -0600
+@@ -128,7 +128,7 @@ libgladeui_1_la_DEPENDENCIES = gladeui-w
+ endif
+ 
+ gladeui-win32-res.o: gladeui.rc
+-	$(WINDRES) $< $@
++	$(AM_V_GEN)$(WINDRES) -I $(srcdir) $< $@
+ 
+ # gladeui.def: auto-generated DEF file for linker input
+ # The routines below will scan the header files and extracts symbol declarations.
+--- origsrc/glade3-3.8.4/src/Makefile.am	2013-09-13 23:01:36.000000000 -0500
++++ src/glade3-3.8.4/src/Makefile.am	2013-11-22 03:38:27.510897800 -0600
+@@ -33,6 +33,6 @@ endif
+ endif
+ 
+ glade-win32-res.o: glade-3.rc
+-	$(WINDRES) $< $@
++	$(AM_V_GEN)$(WINDRES) -I $(srcdir) $< $@
+ 
+ EXTRA_DIST = glade-3.rc.in
