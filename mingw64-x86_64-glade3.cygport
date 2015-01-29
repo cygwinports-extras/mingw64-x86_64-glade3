@@ -3,8 +3,8 @@ ORIG_PN="glade3"
 inherit cross gnome2
 
 NAME="mingw64-x86_64-glade3"
-VERSION=3.8.4
-RELEASE=2
+VERSION=3.8.5
+RELEASE=1
 CATEGORY="Devel"
 SUMMARY="GTK+2 GUI designer for Win64 toolchain"
 DESCRIPTION="Glade is a RAD tool to enable quick & easy development of user
